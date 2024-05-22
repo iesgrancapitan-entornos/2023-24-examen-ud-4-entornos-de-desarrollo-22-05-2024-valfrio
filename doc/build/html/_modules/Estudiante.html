@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="es" data-content_root="../">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Estudiante &mdash; documentación de Examen_Salvador_Martinez - 0.0.1</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=19f00094" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../_static/documentation_options.js?v=6fcc102b"></script>
+        <script src="../_static/doctools.js?v=9a2dae69"></script>
+        <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+        <script src="../_static/translations.js?v=efdbd0b9"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Índice" href="../genindex.html" />
+    <link rel="search" title="Búsqueda" href="../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            Examen_Salvador_Martinez
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Buscar documentos" aria-label="Buscar documentos" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Enunciado.html">Enunciado completo</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../modules.html">2023-24-examen-ud-4-entornos-de-desarrollo-22-05-2024-valfrio</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Examen_Salvador_Martinez</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="index.html">Código de módulo</a></li>
+      <li class="breadcrumb-item active">Estudiante</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <h1>Código fuente para Estudiante</h1><div class="highlight"><pre>
+<span></span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">Clase Estudiante base para el Examen Convocatoria Ordinaria de la UD4</span>
+<span class="sd">:author: Jaime Rabasco</span>
+<span class="sd">Refactorización</span>
+<span class="sd">Extrae una superclase con los campos</span>
+<span class="sd">	nombre</span>
+<span class="sd">	apellidos</span>
+<span class="sd">	nif</span>
+<span class="sd">&quot;&quot;&quot;</span>
+
+
+<div class="viewcode-block" id="Persona">
+<a class="viewcode-back" href="../Estudiante.html#Estudiante.Persona">[documentos]</a>
+<span class="k">class</span> <span class="nc">Persona</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Clase persona.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">vale_name</span><span class="p">,</span> <span class="n">value_nif</span><span class="p">,</span> <span class="n">value_apellidos</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Inicializador de la clase persona.</span>
+
+<span class="sd">        :param vale_name: Nombre de la persona.</span>
+<span class="sd">        :param value_nif: Dni de la persona.</span>
+<span class="sd">        :param value_apellidos: Apellidos de la persona.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">__nif</span> <span class="o">=</span> <span class="n">value_nif</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">__nombre</span> <span class="o">=</span> <span class="n">vale_name</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">__apellidos</span> <span class="o">=</span> <span class="n">value_apellidos</span></div>
+
+
+
+<div class="viewcode-block" id="Estudiante">
+<a class="viewcode-back" href="../Estudiante.html#Estudiante.Estudiante">[documentos]</a>
+<span class="k">class</span> <span class="nc">Estudiante</span><span class="p">(</span><span class="n">Persona</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Clase estudiante derivada de persona.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">nif</span> <span class="o">=</span> <span class="s2">&quot;11111111Z&quot;</span><span class="p">;</span>
+    <span class="n">curso</span> <span class="o">=</span> <span class="s2">&quot;Primaria&quot;</span><span class="p">;</span>
+    <span class="n">nombre</span> <span class="o">=</span> <span class="s2">&quot;Nombre&quot;</span><span class="p">;</span>
+    <span class="n">apellidos</span> <span class="o">=</span> <span class="s2">&quot;Apellidos&quot;</span><span class="p">;</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">pass</span><span class="p">;</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">nif</span><span class="p">,</span> <span class="n">curso</span><span class="p">,</span> <span class="n">nombre</span><span class="p">,</span> <span class="n">apellidos</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Inicializador de lc clase estudiante.</span>
+
+<span class="sd">        :param nif: DNI del estudiante.</span>
+<span class="sd">        :param curso: Curso del estudiante.</span>
+<span class="sd">        :param nombre: Nombre del estudiante.</span>
+<span class="sd">        :param apellidos: Apellidos del estudiante.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">nif</span> <span class="o">=</span> <span class="n">nif</span><span class="p">;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">curso</span> <span class="o">=</span> <span class="n">curso</span><span class="p">;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">nombre</span> <span class="o">=</span> <span class="n">nombre</span><span class="p">;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">apellidos</span> <span class="o">=</span> <span class="n">apellidos</span><span class="p">;</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">nif</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Getter del dni.</span>
+
+<span class="sd">        :return: DNI del estudiante.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">__nif</span>
+
+    <span class="nd">@nif</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">nif</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Setter del dni.</span>
+
+<span class="sd">        :param value: Valor a introducir.</span>
+<span class="sd">        :return: Nada</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">__nif</span> <span class="o">=</span> <span class="n">value</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">curso</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Getter del curso.</span>
+
+<span class="sd">        :return: Curso del estudiante.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">__curso</span>
+
+    <span class="nd">@curso</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">curso</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Setter del curso.</span>
+
+<span class="sd">        :param value: Valor del curso a introducir.</span>
+<span class="sd">        :return: Nada.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">__curso</span> <span class="o">=</span> <span class="n">value</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">nombre</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Getter del nombre.</span>
+
+<span class="sd">        :return: Nombre del estudiante.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">__nombre</span>
+
+    <span class="nd">@nombre</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">nombre</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value</span><span class="p">:</span> <span class="nb">int</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Setter del nombre.</span>
+
+<span class="sd">        :param value: Valor del nombre a introducir.</span>
+<span class="sd">        :return: Nada.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">__nombre</span> <span class="o">=</span> <span class="n">value</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">apellidos</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Getter de los apellidos.</span>
+
+<span class="sd">        :return: Apellidos del estudiante.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">__apellidos</span>
+
+    <span class="nd">@apellidos</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">apellidos</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Setter de los apellidos del estudiante.</span>
+
+<span class="sd">        :param value: Valor de los apellidos a introducir.</span>
+<span class="sd">        :return: Nada.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">__apellidos</span> <span class="o">=</span> <span class="n">value</span></div>
+
+</pre></div>
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Derechos de autor GPL.</p>
+  </div>
+
+  Compilado con <a href="https://www.sphinx-doc.org/">Sphinx</a> usando un
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">tema</a>
+    proporcionado por <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
