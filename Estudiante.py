@@ -8,7 +8,15 @@ Extrae una superclase con los campos
 	nif
 """
 
-class Estudiante:
+
+class Persona:
+    def __init__(self, vale_name, value_nif, value_apellidos):
+        self.__nif = value_nif
+        self.__nombre = vale_name
+        self.__apellidos = value_apellidos
+
+
+class Estudiante(Persona):
     nif = "11111111Z";
     curso = "Primaria";
     nombre = "Nombre";
