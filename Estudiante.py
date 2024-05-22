@@ -13,6 +13,7 @@ class Persona:
     """
     Clase persona.
     """
+
     def __init__(self, vale_name, value_nif, value_apellidos):
         """
         Inicializador de la clase persona.
@@ -127,4 +128,3 @@ class Estudiante(Persona):
         :return: Nada.
         """
         self.__apellidos = value
-
